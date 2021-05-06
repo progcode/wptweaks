@@ -28,7 +28,7 @@ function add_owa_analytics() {
   //<![CDATA[
   var owa_baseUrl = \''.$owaUrl.'\';
   var owa_cmds = owa_cmds || [];
-  owa_cmds.push([\'setSiteId\', \''.$owaTracking.'\');
+  owa_cmds.push([\'setSiteId\', \''.$owaTracking.'\']);
   owa_cmds.push([\'trackPageView\']);
   owa_cmds.push([\'trackClicks\']);
 
