@@ -4,7 +4,7 @@ Plugin Name: WP Tweaks
 Plugin URI: https://icoders.co
 Description: Add tweaks to WP
 Author: Kovacs Daniel Akos
-Version: 1.0.12
+Version: 1.0.13
 */
 
 /**
