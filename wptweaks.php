@@ -172,3 +172,12 @@ function remove_script_style_wp_ver( $src ) {
 }
 add_filter( 'style_loader_src', 'remove_script_style_wp_ver' );
 add_filter( 'script_loader_src', 'remove_script_style_wp_ver' );
+
+//fix wp5.7 robots
+add_filter( 'wp_robots', 'wp_robots_remove_noindex', 999 );
+function wp_robots_remove_noindex( $robots ){
+    $robots[ 'index' ] = true;
+    $robots[ 'noindex' ] = false;
+
+    return $robots;   
+}
