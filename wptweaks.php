@@ -49,7 +49,6 @@ add_action( 'wp_head', 'add_owa_analytics' );
  */
 add_theme_support('soil', [
     'clean-up',
-    'disable-rest-api',
     'disable-asset-versioning',
     'disable-trackbacks',
     'js-to-footer',
