@@ -98,21 +98,6 @@ remove_action('wp_head', 'print_emoji_detection_script', 7);
 remove_action('wp_print_styles', 'print_emoji_styles');
 
 /**
- * Disable REST-API for all users except of admin
- */
-add_filter('rest_authentication_errors', function ($access) {
-    if (!current_user_can('administrator')) {
-        return new WP_Error('rest_cannot_access', 'Only authenticated users can access the REST API.', ['status' => rest_authorization_required_code()]);
-    }
-    return $access;
-});
-
-/**
- * Remove REST-AI link from <head>
- */
-remove_action('wp_head', 'rest_output_link_wp_head');
-
-/**
  * Disable XML-RPC
  */
 add_filter('xmlrpc_enabled', function (): bool {
