@@ -9,7 +9,7 @@
       "homepage": "https://icoders.co"
     }
   ],
-  "version": "1.0.1",
+  "version": "1.0.11",
   "type": "wordpress-plugin",
   "require": {
     "php": ">=7.3"
