@@ -5,3 +5,11 @@
 ## Overview
 
 Add some tweaks to WP
+
+## Version
+
+1.0.1
+- Fixes, Soil support
+
+1.0.0
+- Init
