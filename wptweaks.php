@@ -178,6 +178,8 @@ add_filter( 'wp_robots', 'wp_robots_remove_noindex', 999 );
 function wp_robots_remove_noindex( $robots ){
     $robots[ 'index' ] = true;
     $robots[ 'noindex' ] = false;
-
+    $robots[ 'follow' ] = true;
+    $robots[ 'nofollow' ] = false;
+    
     return $robots;   
 }
