@@ -4,7 +4,7 @@ Plugin Name: WP Tweaks
 Plugin URI: https://icoders.co
 Description: Add tweaks to WP
 Author: Kovacs Daniel Akos
-Version: 1.0.0
+Version: 1.0.1
 */
 
 /**
@@ -26,9 +26,9 @@ function add_owa_analytics() {
 
   echo '<script type="text/javascript">
   //<![CDATA[
-  var owa_baseUrl = '.$owaUrl.';
+  var owa_baseUrl = \''.$owaUrl.'\';
   var owa_cmds = owa_cmds || [];
-  owa_cmds.push([\'setSiteId\', '.$owaTracking.']);
+  owa_cmds.push([\'setSiteId\', \''.$owaTracking.'\');
   owa_cmds.push([\'trackPageView\']);
   owa_cmds.push([\'trackClicks\']);
 
@@ -42,6 +42,19 @@ function add_owa_analytics() {
   </script>';
 }
 add_action( 'wp_head', 'add_owa_analytics' );
+
+/**
+ * Enable features from Soil when plugin is activated
+ * @link https://roots.io/plugins/soil/
+ */
+add_theme_support('soil', [
+    'clean-up',
+    'disable-rest-api',
+    'disable-asset-versioning',
+    'disable-trackbacks',
+    'js-to-footer',
+    'nice-search',
+]);
 
 /**
  * Alter dns-prefetch links in <head>
