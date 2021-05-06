@@ -1,0 +1,17 @@
+{
+  "name": "progcode/wptweaks",
+  "description": "Add some tweaks to WP",
+  "keywords": ["wordpress", "plugin"],
+  "homepage": "https://github.com/progcode/wptweaks",
+  "authors": [
+    {
+      "name": "Iconocoders",
+      "homepage": "https://icoders.co"
+    }
+  ],
+  "version": "1.0.0",
+  "type": "wordpress-plugin",
+  "require": {
+    "php": ">=7.3"
+  }
+}
